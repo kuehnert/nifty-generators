@@ -1,3 +1,6 @@
+= Forked to use formtastic and respond_with method in controllers
+
+
 = Nifty Generators
 
 A collection of useful Rails generator scripts for scaffolding, layout files, authentication, and more.
