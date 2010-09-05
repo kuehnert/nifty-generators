@@ -1,0 +1,8 @@
+  def index
+    @<%= plural_name %> = <%= class_name %>.all
+<<<<<<< HEAD
+    respond_with @<%= plural_name %>
+=======
+    respond_with @<%= singular_name %>
+>>>>>>> 09b5d4dadf0eefab52e44e7abf54672495084a44
+  end

@@ -1,0 +1,14 @@
+= semantic_form_for @<%= singular_name %> do |f|
+<<<<<<< HEAD
+  = f.inputs do
+    <%- for attribute in model_attributes -%>
+    = f.input :<%= attribute.name %>
+    <%- end -%>
+  = f.buttons
+
+-# f.input :user, :as => :select
+-# f.input :user_id, :as => :hidden, :value => current_user.id
+=======
+  = f.inputs
+  = f.buttons
+>>>>>>> 09b5d4dadf0eefab52e44e7abf54672495084a44

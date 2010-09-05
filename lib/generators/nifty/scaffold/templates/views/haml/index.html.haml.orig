@@ -1,0 +1,55 @@
+- title "#{<%= class_name %>.model_name.human(:count => :many)}: Übersicht"
+
+%table
+<<<<<<< HEAD
+  %thead
+    %tr
+      <%- for attribute in model_attributes -%>
+      %th= <%= class_name %>.human_attribute_name(:<%= attribute.name %>)
+=======
+  %tr
+    <%- for attribute in attributes -%>
+    %th <%= attribute.column.human_name %>
+    <%- end -%>
+  - for <%= singular_name %> in @<%= plural_name %>
+    %tr
+      <%- for attribute in attributes -%>
+      %td= h <%= singular_name %>.<%= attribute.name %>
+      <%- end -%>
+      <%- if action? :show -%>
+      %td= link_to 'S', <%= singular_name %>
+      |
+      <%- end -%>
+      <%- if action? :edit -%>
+      %td= link_to 'E', edit_<%= singular_name %>_path(<%= singular_name %>)
+      |
+      <%- end -%>
+      <%- if action? :destroy -%>
+      %td= link_to 'X', <%= singular_name %>, :confirm => t('are_you_sure'), :method => :delete
+>>>>>>> 09b5d4dadf0eefab52e44e7abf54672495084a44
+      <%- end -%>
+      %th= t(:actions)
+  %tbody
+    - for <%= singular_name %> in @<%= plural_name %>
+      %tr
+        <%- for attribute in model_attributes -%>
+        %td= <%= singular_name %>.<%= attribute.name %>
+        <%- end -%>
+        %td
+          <%- if action? :show -%>
+          = link_to t(:show), <%= singular_name %>
+          <%- end -%>
+          <%- if action? :edit -%>
+          = link_to t(:edit), edit_<%= singular_name %>_path(<%= singular_name %>)
+          <%- end -%>
+          <%- if action? :destroy -%>
+          = link_to t(:destroy), <%= singular_name %>, :confirm => t('are_you_sure'), :method => :delete
+          <%- end -%>
+
+<%- if actions? :new -%>
+<<<<<<< HEAD
+%p= link_to "#{<%= class_name %>.model_name.human} erstellen", new_<%= singular_name %>_path
+=======
+%p= link_to "<%= singular_name.titleize %> erstellen", new_<%= singular_name %>_path
+>>>>>>> 09b5d4dadf0eefab52e44e7abf54672495084a44
+<%- end -%>

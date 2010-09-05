@@ -1,0 +1,11 @@
+- title "#{<%= class_name %>.model_name.human} erstellen"
+
+<%= render_form %>
+
+<<<<<<< HEAD
+<%- if action? :index -%>
+%p= link_to t(:back), <%= plural_name %>_path
+<%- end -%>
+=======
+%p= link_to t(:back), :back
+>>>>>>> 09b5d4dadf0eefab52e44e7abf54672495084a44

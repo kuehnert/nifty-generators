@@ -1,0 +1,10 @@
+  def destroy
+    @<%= singular_name %> = <%= class_name %>.find(params[:id])
+    @<%= singular_name %>.destroy
+<<<<<<< HEAD
+    flash[:notice] = "#{<%= class_name %>.model_name.human} #{@<%= singular_name %>} gelöscht."
+=======
+    flash[:notice] = "<%= name.underscore.humanize.downcase %> gelöscht."
+>>>>>>> 09b5d4dadf0eefab52e44e7abf54672495084a44
+    respond_with @<%= singular_name %>
+  end

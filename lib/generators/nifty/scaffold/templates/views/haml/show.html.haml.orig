@@ -1,0 +1,32 @@
+- title "#{<%= class_name %>.model_name.human} Details"
+
+<%- for attribute in attributes -%>
+%p
+<<<<<<< HEAD
+  = <%= class_name %>.human_attribute_name(:<%= attribute.name %>) + ":"
+  %strong= @<%= singular_name %>.<%= attribute.name %>
+=======
+  %strong <%= attribute.column.human_name.titleize %>:
+  =h @<%= singular_name %>.<%= attribute.name %>
+>>>>>>> 09b5d4dadf0eefab52e44e7abf54672495084a44
+<%- end -%>
+
+%p
+  <%- if action? :edit -%>
+  = link_to t(:edit), edit_<%= singular_name %>_path(@<%= singular_name %>)
+  |
+  <%- end -%>
+  <%- if action? :destroy -%>
+<<<<<<< HEAD
+  = link_to t(:destroy), @<%= singular_name %>, :confirm => t('are_you_sure'), :method => :delete
+  |
+  <%- end -%>
+  <%- if action? :index -%>
+  = link_to t(:index), <%= plural_name %>_path
+  <%- end -%>
+=======
+  = link_to t(:destroy), @<%= singular_name %>, :confirm => 'Are you sure?', :method => :delete
+  |
+  <%- end -%>
+  = link_to t(:back), :back
+>>>>>>> 09b5d4dadf0eefab52e44e7abf54672495084a44

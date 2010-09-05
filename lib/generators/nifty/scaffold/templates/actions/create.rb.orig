@@ -1,0 +1,11 @@
+  def create
+    @<%= singular_name %> = <%= class_name %>.new(params[:<%= singular_name %>])
+    if @<%= singular_name %>.save
+<<<<<<< HEAD
+      flash[:notice] = "#{<%= class_name %>.model_name.human} #{@<%= singular_name %>} erstellt."
+=======
+      flash[:notice] = "<%= name.underscore.humanize.downcase %> erstellt."
+>>>>>>> 09b5d4dadf0eefab52e44e7abf54672495084a44
+    end
+    respond_with @<%= singular_name %>
+  end
