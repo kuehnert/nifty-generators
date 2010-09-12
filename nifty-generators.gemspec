@@ -1,3 +1,4 @@
+# encoding: utf-8
 Gem::Specification.new do |s|
   s.name        = "nifty-generators"
   s.version     = "0.4.1"
